@@ -9,7 +9,7 @@ http
     if (req.url === "/") {
       res.end("This is home page and your name is "+ obj.name);
     } else if (req.url === "/login") {
-      res.end("This is login page and your age is " + obj.age);
+      res.end(`This is login page and your age is ${obj.age}`);
     } else if (req.url === "/signup") {
       res.end("This is signup page");
     }
