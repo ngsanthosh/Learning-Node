@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ngsanthosh/Learning-Node/issues"
   },
-  "homepage": "https://github.com/ngsanthosh/Learning-Node#readme"
+  "homepage": "https://github.com/ngsanthosh/Learning-Node#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
