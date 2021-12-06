@@ -11,7 +11,7 @@ http
     } else if (req.url === "/login") {
       res.end(`This is login page and your age is ${obj.age}`);
     } else if (req.url === "/signup") {
-      res.end("This is signup page");
+      res.end("This is signup page and this is how "+obj.data1+" your words are");
     }
   })
   .listen(9000);
