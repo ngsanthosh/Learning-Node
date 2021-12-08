@@ -15,6 +15,14 @@ app.get("/users", function (req, res) {
   res.send(users);
 });
 
+app.post("/signin", function (req, res) {
+  const usern = req.body.username;
+  const pass = req.body.password;
+  (usern == "santhosh" && pass == "santhosh")
+    ? res.end("Successful")
+    : res.end("Failure");
+});
+
 app.listen(5000, function () {
   console.log("THe port is listening...");
 });
