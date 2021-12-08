@@ -19,8 +19,8 @@ app.post("/signin", function (req, res) {
   const usern = req.body.username;
   const pass = req.body.password;
   (usern == "santhosh" && pass == "santhosh")
-    ? res.end("Successful")
-    : res.end("Failure");
+    ? res.end("Sign in Successful")
+    : res.end("Sign in Failed");
 });
 
 app.listen(5000, function () {
