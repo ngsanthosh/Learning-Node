@@ -16,3 +16,5 @@ route.get("/register", (req, res) => {
 route.get("/forgetpassword", (req, res) => {
   res.send("This is Resetting password route");
 });
+
+module.exports = route;
