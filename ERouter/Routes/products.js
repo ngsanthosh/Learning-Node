@@ -10,3 +10,5 @@ route.get("/getproducts", (req, res) => {
 route.get("/addproducts", (req, res) => {
   res.send("This is all about adding products page");
 });
+
+module.exports = route;
