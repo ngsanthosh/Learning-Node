@@ -15,4 +15,10 @@ app.post("/addgames", (req, res) => {
   
 });
 
+app.post("/getgames", (req, res) => {
+  
+});
+
+
+
 app.listen(5000, () => {});
