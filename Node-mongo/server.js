@@ -29,6 +29,10 @@ app.post("/addgames", (req, res) => {
     jersey: req.body.jersey,
     sport: req.body.sport,
   });
+
+  addgames.save((err) => {
+    err ? res.send("The error") : res.send("Successfull addition");
+  });
 });
 
 app.post("/getgames", (req, res) => {});
