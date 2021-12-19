@@ -1,5 +1,9 @@
 const express = require("express");
 
+const bodyparser = require("body-parser");
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
+
 const app = express();
 
 const mongoose = require("mongoose");
