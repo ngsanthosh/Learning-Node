@@ -1,10 +1,9 @@
 const express = require("express");
+const app = express();
 
 const bodyparser = require("body-parser");
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-
-const app = express();
 
 const mongoose = require("mongoose");
 
@@ -35,7 +34,11 @@ app.post("/addgames", (req, res) => {
   });
 });
 
-app.post("/getgames", (req, res) => {});
+app.post("/getgames", (req, res) => {
+  GamesStruc.find({}, (err, docs) => {
+    err ? res.send("Error Occured") : res.send(docs);
+  });
+});
 
 app.post("/updategame", (req, res) => {});
 
