@@ -5,28 +5,26 @@ const app = express();
 const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/games", (err) => {
-  err ? console.log("The error is "+err) : console.log("Connection successfull for mongooo");
+  err
+    ? console.log("The error is " + err)
+    : console.log("Connection successfull for mongooo");
+});
+
+const GamesStruc = mongoose.model("games", {
+  name: String,
+  weight: Number,
+  sport: String,
 });
 
 // app.get("", (req, res) => {
 //   res.send("How are you daaa");
 // });
-app.post("/addgames", (req, res) => {
-  
-});
+app.post("/addgames", (req, res) => {});
 
-app.post("/getgames", (req, res) => {
-  
-});
+app.post("/getgames", (req, res) => {});
 
-app.post("/updategame", (req, res) => {
-  
-});
+app.post("/updategame", (req, res) => {});
 
-app.post("/removegame", (req, res) => {
-  
-});
-
-
+app.post("/removegame", (req, res) => {});
 
 app.listen(5000, () => {});
