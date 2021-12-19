@@ -19,6 +19,10 @@ app.post("/getgames", (req, res) => {
   
 });
 
+app.post("/updaetgame", (req, res) => {
+  
+});
+
 
 
 app.listen(5000, () => {});
