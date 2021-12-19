@@ -19,7 +19,11 @@ app.post("/getgames", (req, res) => {
   
 });
 
-app.post("/updaetgame", (req, res) => {
+app.post("/updategame", (req, res) => {
+  
+});
+
+app.post("/removegame", (req, res) => {
   
 });
 
