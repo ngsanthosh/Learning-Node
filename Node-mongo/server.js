@@ -16,14 +16,20 @@ mongoose.connect("mongodb://localhost:27017/games", (err) => {
 
 const GamesStruc = mongoose.model("games", {
   name: String,
-  weight: Number,
+  jersey: Number,
   sport: String,
 });
 
 // app.get("", (req, res) => {
 //   res.send("How are you daaa");
 // });
-app.post("/addgames", (req, res) => {});
+app.post("/addgames", (req, res) => {
+  const addgames = new GamesStruc({
+    name: req.body.name,
+    jersey: req.body.jersey,
+    sport: req.body.sport,
+  });
+});
 
 app.post("/getgames", (req, res) => {});
 
