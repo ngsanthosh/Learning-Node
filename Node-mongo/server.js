@@ -41,9 +41,17 @@ app.post("/getgames", (req, res) => {
 });
 
 app.post("/updategame", (req, res) => {
-  GamesStruc.findOneAndUpdate({}, {}, (err) => {
-    err ? res.send("Error occured!") : res.send("Successfully updated :)");
-  });
+  GamesStruc.findOneAndUpdate(
+    {
+      jersey: req.body.jersey,
+    },
+    {
+      name:req.body.newname,
+    },
+    (err) => {
+      err ? res.send("Error occured!") : res.send("Successfully updated :)");
+    }
+  );
 });
 
 app.post("/removegame", (req, res) => {
