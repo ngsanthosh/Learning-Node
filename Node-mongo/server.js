@@ -43,9 +43,14 @@ app.post("/getgames", (req, res) => {
 app.post("/updategame", (req, res) => {});
 
 app.post("/removegame", (req, res) => {
-  GamesStruc.findOneAndDelete({}, (err) => {
-    err ? res.send("Error occured!") : res.send("Successfully removed :)");
-  });
+  GamesStruc.findOneAndDelete(
+    {
+      jersey: req.body.jersey,
+    },
+    (err) => {
+      err ? res.send("Error occured!") : res.send("Successfully removed :)");
+    }
+  );
 });
 
 app.listen(5000, () => {});
